@@ -9,6 +9,8 @@
     <body>
 
         <script type="text/javascript">
+            
+            //関数宣言
             function toOneDimension(previousValue, currentValue) {
                 return previousValue.concat(currentValue);
             }
@@ -17,16 +19,33 @@
                 ['A1', 'A2', 'A3'],
                 ['B1', 'B2', 'B3'],
                 ['C1', 'C2', 'C3']
-            ];
-
-            var sampleArrayB = sampleArrayA.reduce(toOneDimension);
+            ];        
+            console.log("変数sampleArrayAの値は"+sampleArrayA);
+            
+            sampleArrayA.reverse();
+            console.log("変数sampleArrayAの値は"+sampleArrayA);
+            
+            var sampleArrayB = sampleArrayA.reduce( toOneDimension );    
+            console.log("変数sampleArrayBの値は"+sampleArrayB);
+            
+            /*
+            var sampleArrayB = [];
+            for (var i=sampleArrayA.length-1;i>=0;i--){
+                sampleArrayB=sampleArrayB.concat(sampleArrayA[i]);
+            }
+            */
 
             for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
                 document.write('sampleArrayB[' + counterVar + ']: ');
                 document.write(sampleArrayB[counterVar]);
-                document.write('<br />');
+                document.write('<br/>');
+                
+                console.log(counterVar+"回目"+sampleArrayB[counterVar]);
+               
             }
+        
         </script>
+
 
 
     </body>
