@@ -12,7 +12,7 @@
             
             //関数宣言
             function toOneDimension(previousValue, currentValue) {
-                return previousValue.concat(currentValue);
+                return currentValue.concat(previousValue);
             }
 
             var sampleArrayA = [
@@ -22,19 +22,22 @@
             ];        
             console.log("変数sampleArrayAの値は"+sampleArrayA);
             alert("変数sampleArrayAの値は"+sampleArrayA);
+            console.log(sampleArrayA[0]);
             
+            /*
             sampleArrayA.reverse();
             console.log("変数sampleArrayAの値は"+sampleArrayA);
-            alert("変数sampleArrayAの値は"+sampleArrayA);
+            */
             
-            var sampleArrayB = sampleArrayA.reduce( toOneDimension );    
+            var sampleArrayB = sampleArrayA.reduce( toOneDimension );
             console.log("変数sampleArrayBの値は"+sampleArrayB);
-            alert("変数sampleArrayBの値は"+sampleArrayB);
             
             /*
             var sampleArrayB = [];
             for (var i=sampleArrayA.length-1;i>=0;i--){
                 sampleArrayB=sampleArrayB.concat(sampleArrayA[i]);
+                
+                console.log(i+":"+sampleArrayB);
             }
             */
 
