@@ -12,6 +12,7 @@
             
             //関数宣言
             function toOneDimension(previousValue, currentValue) {
+                console.log(previousValue,currentValue);
                 return currentValue.concat(previousValue);
             }
 
@@ -22,7 +23,7 @@
             ];        
             console.log("変数sampleArrayAの値は"+sampleArrayA);
             alert("変数sampleArrayAの値は"+sampleArrayA);
-            console.log(sampleArrayA[0]);
+            console.log(sampleArrayA);
             
             /*
             sampleArrayA.reverse();
@@ -30,6 +31,7 @@
             */
             
             var sampleArrayB = sampleArrayA.reduce( toOneDimension );
+            console.log(sampleArrayA);
             console.log("変数sampleArrayBの値は"+sampleArrayB);
             
             /*
